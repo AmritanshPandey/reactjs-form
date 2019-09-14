@@ -9,7 +9,6 @@ import 'typeface-roboto';
 class ProfileImage extends Component {
 state = {
     selectedFile: null,
-    imagePreviewUrl: null
 };
 
 fileChangeHandler = event => {

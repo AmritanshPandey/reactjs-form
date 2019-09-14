@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import AppBar from 'material-ui/AppBar';
 import {List, ListItem} from 'material-ui/List';
+import Avatar from 'material-ui/Avatar';
 import RaisedButton from 'material-ui/RaisedButton';
 import 'typeface-roboto';
 
@@ -20,7 +21,7 @@ class Confirm extends Component {
     }
 
     render() {
-        const { values: { firstName, lastName, email, occupation, city, bio} } = this.props;
+        const { values: { firstName, lastName, email, occupation, city, bio, imagePreviewUrl} } = this.props;
         return (
             <MuiThemeProvider>
                 <React.Fragment>
@@ -49,6 +50,11 @@ class Confirm extends Component {
                         <ListItem 
                         primaryText="Bio"
                         secondaryText={bio}
+                        />
+                        <ListItem 
+                        primaryText="Profile Image"
+                        secondaryText={firstName, lastName}
+                        leftAvatar={<Avatar src={imagePreviewUrl} />}
                         />
                     </List>
                     <RaisedButton 
