@@ -32,31 +32,28 @@ class Confirm extends Component {
                         />
                         <ListItem 
                         primaryText="Last Name"
-                        secondaryText={LastName}
+                        secondaryText={lastName}
                         />
                         <ListItem 
-                        primaryText="First Name"
+                        primaryText="Email"
                         secondaryText={email}
                         />
                         <ListItem 
-                        primaryText="First Name"
-                        secondaryText={firstName}
+                        primaryText="Occupation"
+                        secondaryText={occupation}
                         />
                         <ListItem 
-                        primaryText="First Name"
-                        secondaryText={firstName}
+                        primaryText="City"
+                        secondaryText={city}
                         />
                         <ListItem 
-                        primaryText="First Name"
-                        secondaryText={firstName}
+                        primaryText="Bio"
+                        secondaryText={bio}
                         />
-                        <ListItem 
-                        primaryText="First Name"
-                        secondaryText={firstName}
-                        />
+                        
                     </List>
                     <RaisedButton 
-                    label="Continue" 
+                    label="Confirm & Continue" 
                     primary={true} 
                     style={styles.button}
                     onClick={this.continue}
