@@ -30,7 +30,7 @@ class FormUserDetails extends Component {
                         hintText="Enter Your Last Name"
                         floatingLabelText="Last Name"
                         onChange={handleChange('lastName')}
-                        defaultValue={values.firstName}
+                        defaultValue={values.lastName}
                     />
 
                     <TextField
@@ -38,7 +38,7 @@ class FormUserDetails extends Component {
                         hintText="Enter Your Email ID"
                         floatingLabelText="Email ID"
                         onChange={handleChange('email')}
-                        defaultValue={values.firstName}
+                        defaultValue={values.email}
                     />
 
                     <RaisedButton 

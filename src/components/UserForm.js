@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import FormUserDetails from './FormUserDetails';
 import FormPersonalDetails from './FormPersonalDetails';
+import ProfileImage from './ProfileImage';
 import Confirm from './Confirm';
 import Success from './Success';
+
 
 
 
@@ -14,7 +16,8 @@ class UserForm extends Component {
         email: '',
         occupation: '',
         city: '',
-        bio: ''
+        bio: '',
+        image: ''
     }
 
     // Proceed to the Next Step
@@ -39,8 +42,8 @@ class UserForm extends Component {
     }
     render() {
         const { step } = this.state;
-        const { firstName, lastName, email, occupation, city, bio} = this.state;
-        const values = { firstName, lastName, email, occupation, city, bio}
+        const { firstName, lastName, email, occupation, city, bio, image} = this.state;
+        const values = { firstName, lastName, email, occupation, city, bio, image}
         
         switch(step){
             case 1: 
@@ -62,6 +65,14 @@ class UserForm extends Component {
             );
             case 3: 
             return (
+                <ProfileImage
+                nextStep={this.nextStep}
+                prevStep={this.prevStep}
+                values={values}
+                />
+            );
+            case 4: 
+            return (
                 <Confirm 
                 nextStep={this.nextStep}
                 prevStep={this.prevStep}
@@ -69,7 +80,7 @@ class UserForm extends Component {
                 />
             );
             
-            case 4: 
+            case 5: 
             return (
                 <Success />
             )
