@@ -7,6 +7,25 @@ import 'typeface-roboto';
 
 
 class ProfileImage extends Component {
+state = {
+    selectedFile: null,
+    imagePreviewUrl: null
+};
+
+fileChangeHandler = event => {
+    this.setState({
+        selectedFile: event.target.files[0]
+    })
+
+    let reader = new FileReader();
+
+    reader.onloadend = () => {
+        this.setState({
+            imagePreviewUrl: reader.result
+        });
+    }
+    reader.readAsDataURL(event.target.files[0])
+}
     continue = e => {
         e.preventDefault();
         this.props.nextStep();
@@ -27,13 +46,16 @@ class ProfileImage extends Component {
             <MuiThemeProvider>
                 <React.Fragment>
                     <AppBar title="Upload your Profile Image" />
-                    <p>Upload Image</p>
+                    <input type="file" name="profile" onChange={this.fileChangeHandler} />
+                    <br />
                     <RaisedButton 
-                    label="Continue" 
-                    primary={true} 
+                    label="Submit" 
+                    secondary={true} 
                     style={styles.button}
                     onClick={this.continue}
                     />
+                    { $imagePreview }
+                    
                     <RaisedButton 
                     label="Back" 
                     primary={false} 

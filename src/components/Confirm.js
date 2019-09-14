@@ -50,7 +50,6 @@ class Confirm extends Component {
                         primaryText="Bio"
                         secondaryText={bio}
                         />
-                        
                     </List>
                     <RaisedButton 
                     label="Confirm & Continue" 
