@@ -17,8 +17,9 @@ class UserForm extends Component {
         occupation: '',
         city: '',
         bio: '',
-        imagePreviewUrl: ''
-    }
+        imagePreviewUrl: null
+    };
+    
 
     // Proceed to the Next Step
     nextStep = () => {

@@ -51,11 +51,7 @@ class Confirm extends Component {
                         primaryText="Bio"
                         secondaryText={bio}
                         />
-                        <ListItem 
-                        primaryText="Profile Image"
-                        secondaryText={firstName, lastName}
-                        leftAvatar={<Avatar src={imagePreviewUrl} />}
-                        />
+                        
                     </List>
                     <RaisedButton 
                     label="Confirm & Continue" 
